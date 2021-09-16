@@ -10,4 +10,11 @@ function updateOutput(){
     text.style.lineHeight = slider.value;
 }
 
-console.log("hello");
+setInterval(elongate, 1000/60)
+
+function elongate(){
+    console.log("hi" + slider.value);
+    slider.value = parseFloat(slider.value) + .05;
+    
+    updateOutput();
+}
